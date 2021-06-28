@@ -1,0 +1,12 @@
+[user]
+	name = 
+	email = 
+[alias]
+	st = status
+	cm = commit
+	cmam = commit --amend
+	b = branch
+	co = checkout
+	df = diff
+	dfs = diff --staged
+        lgo = log
