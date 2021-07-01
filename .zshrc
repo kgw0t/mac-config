@@ -33,10 +33,7 @@ alias gitop='cd `git rev-parse --show-toplevel`'
 # export PATH="/opt/homebrew/bin:$PATH""
 
 # pyenv
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init --path)"
-# eval "$(pyenv init -)"
-
-
-export PATH="/usr/local/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
