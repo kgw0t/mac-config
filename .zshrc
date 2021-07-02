@@ -25,7 +25,6 @@ setopt no_beep
 alias l='ls'
 alias ll='ls -l'
 alias la='ls -la'
-alias dev='cd ~/develop'
 alias gitop='cd `git rev-parse --show-toplevel`'
 
 # Homebrew

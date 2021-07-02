@@ -12,4 +12,6 @@ $ pyenv install 3.9.5
 $ pyenv global 3.9.5
 
 $ ssh-keygen -t rsa
+$ ssh-add ~/.ssh/id_rsa
+$ ssh-add -l
 ```

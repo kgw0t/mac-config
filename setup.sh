@@ -3,4 +3,6 @@ cp .gitconfig ~/.
 cp .vimrc ~/.
 cp .zshrc ~/.
 cp .zshrc_for_container ~/.
-cp -r develop ~/.
+
+mkdir ~/workspace
+cp -r .devcontainer ~/workspace/.

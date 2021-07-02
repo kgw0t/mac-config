@@ -6,7 +6,7 @@ services:
             context: .
         tty: true
         volumes:
-            - $HOME/develop:/workspace/develop
+            - $HOME/workspace/.:/workspace/.
             - $HOME/.aws:/root/.aws
             - $HOME/.zshrc_for_container:/root/.zshrc
             - $HOME/.gitconfig:/root/.gitconfig
