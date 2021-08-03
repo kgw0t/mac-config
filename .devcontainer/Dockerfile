@@ -1,30 +1,23 @@
+# syntax=docker/dockerfile:1.3-labs
 FROM python:3.9.5-buster
 
-RUN pip install --upgrade pip
-RUN pip install numpy
-RUN pip install pandas
-RUN pip install pytz
-RUN pip install python-decouple
-RUN pip install pyarrow
-RUN pip install aws_lambda_powertools
-RUN pip install awswrangler
+RUN <<EOF
+pip install --upgrade pip
+pip install numpy pandas pytz python-decouple pyarrow aws_lambda_powertools awswrangler
+pip install flake8 autopep8 pytest pytest-cov pytest-mock moto cfn-lint ipython
+EOF
 
-RUN pip install flake8
-RUN pip install autopep8
-RUN pip install pytest pytest-cov pytest-mock
-RUN pip install moto
-RUN pip install cfn-lint
-RUN pip install ipython
+RUN <<EOF
+curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+rm -rf awscliv2.zip
+./aws/install
+EOF
 
-RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip" \
-    && unzip awscliv2.zip \
-    && rm -rf awscliv2.zip \
-    && ./aws/install
-
-RUN apt-get update -y
-RUN apt-get install -y jq
-RUN apt-get install -y vim
-RUN apt-get install -y zsh
+RUN <<EOF
+apt-get update -y
+apt-get install -y jq vim zsh
+EOF
 
 RUN chsh -s $(which zsh)
 
