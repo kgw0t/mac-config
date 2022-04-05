@@ -17,7 +17,10 @@
 	"workspaceFolder": "/workspace",
 
 	// Set *default* container specific settings.json values on container create.
-	"settings": {},
+	"settings": {
+		"cfnLint.path": "/usr/local/bin/cfn-lint",
+		"python.pythonPath": "/usr/local/bin/python"
+	},
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
@@ -29,7 +32,12 @@
 		"ms-toolsai.jupyter",
 		"redhat.vscode-yaml",
 		"ryanluker.vscode-coverage-gutters",
-		"streetsidesoftware.code-spell-checker"
+		"streetsidesoftware.code-spell-checker",
+		"grapecity.gc-excelviewer",
+		"mechatroner.rainbow-csv",
+		"dbaeumer.vscode-eslint",
+		"johnsoncodehk.volar",
+		"github.copilot-labs"
 	]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

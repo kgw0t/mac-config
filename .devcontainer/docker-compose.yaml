@@ -11,3 +11,4 @@ services:
             - $HOME/.zshrc_for_container:/root/.zshrc
             - $HOME/.gitconfig:/root/.gitconfig
             - $HOME/.ssh:/root/.ssh
+            - $HOME/.ipython:/root/.ipython
